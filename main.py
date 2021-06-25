@@ -20,7 +20,7 @@ sample_size = 16 # the number of demonstrations for each reward/intention
 rewards_types = ['A','B','C'] # intention/reward types which are in total six, ['A','B','C','D','E','F']
 exp_n = 1
 seed = 1
-mirl_maxiter = 200
+mirl_maxiter = 1
 
 
 checkpoint = {
@@ -95,6 +95,9 @@ print('solving for reward types '+str(rewards_types)+':')
 print('MIRL training:')
 
 mirl_solutions, EVDs, rewardssquence = Mirl.momaxentrun(maxIter = mirl_maxiter)
+
+print('MIRL training is finished')
+print('Generating the picture ...')
 Drawing(game, rewards, rewardssquence, model, linmodel_solutions,all_example_samples, mirl_solutions,image_path)
 
 checkpoint['rewards'] = rewards
@@ -105,7 +108,7 @@ checkpoint['all_example_samples'] = all_example_samples
 checkpoint['n_samples'] = n_samples
 checkpoint['mirl_solutions'] = mirl_solutions
 checkpoint['EVDs'] = EVDs
-print('Saving mirl solutions to {}'.format(checkpoint_path))
+print('Saving mirl solutions to {} ...'.format(checkpoint_path))
 torch.save(checkpoint, checkpoint_path)
 print('Done.')
 
