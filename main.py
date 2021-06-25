@@ -11,23 +11,24 @@ from mdp import MDP
 from drawing import Drawing
 torch.manual_seed(0)
 
-mirl_type = 'SEM' # either 'SEM' or 'MCEM', where 'SEM' : SEM-MIIRL and 'MCEM' : MCEM-MIIRL 
-game_type = 'bw' # either 'ow' or 'bw', where 'ow' : M-ObjectWorld and 'bw' : M-BinaryWorld
+miirl_type = 'SEM' # either 'SEM' or 'MCEM', where 'SEM' : SEM-MIIRL and 'MCEM' : MCEM-MIIRL 
+game_type = 'ow' # either 'ow' or 'bw', where 'ow' : M-ObjectWorld and 'bw' : M-BinaryWorld
 checkpoint_dir = './checkpoints'
 sample_length = 8 # the length of each demonstration sample
 alpha = 1 # concentration parameter
 sample_size = 16 # the number of demonstrations for each reward/intention
-rewards_types = ['A','B','C'] # intention/reward types which are in total six, ['A','B','C','D','E','F']
+rewards_types = ['A','B'] # intention/reward types which are in total six, ['A','B','C','D','E','F']
+mirl_maxiter = 200 # maximum number of iterations
+
 exp_n = 1
 seed = 1
-mirl_maxiter = 200
 
 
 checkpoint = {
 
             'seed': [],
             'game_type': [],
-            'mirl_type': [],
+            'miirl_type': [],
             'game': [],
             'model': [],
             'rewards': [],
@@ -41,7 +42,7 @@ checkpoint = {
         }
 
 
-checkpoint_name = str(exp_n)+mirl_type+game_type
+checkpoint_name = str(exp_n)+miirl_type+game_type
 checkpoint_path = os.path.join(checkpoint_dir,checkpoint_name+'.pt')
 image_path = os.path.join(checkpoint_dir,checkpoint_name+'.png')
 
@@ -53,7 +54,7 @@ elif game_type == 'bw':
 model = MDP(game)
 checkpoint['seed'] = seed
 checkpoint['game_type'] = game_type
-checkpoint['mirl_type'] = mirl_type
+checkpoint['miirl_type'] = miirl_type
 checkpoint['game'] = game
 checkpoint['model'] = model
 
@@ -77,13 +78,13 @@ for r in range(len(rewards_types)):
     linmodel_solutions.append(linmodel_solution)
     n_samples.append(n_sample)
 
-if mirl_type == 'SEM':
+if miirl_type == 'SEM':
 
     Mirl = SEM(
         game, rewards, model, linmodel_solutions, 
         all_example_samples, n_samples, 1, alpha
     )
-elif mirl_type == 'MCEM':
+elif miirl_type == 'MCEM':
 
     Mirl = MCEM(
         game, rewards, model, linmodel_solutions,
