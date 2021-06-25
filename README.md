@@ -52,7 +52,7 @@ The following paramters are defined which can be set for various experiments:
 - <b>mirl_maxiter</b>: the maximum number of iterations
 
 ## Experiment
-We conduct an experiments by setting the paramters as:
+We conduct an experiment by setting the paramters as:
 - miirl_type = 'SEM'
 - game_type = 'ow'
 - sample_length = 8
