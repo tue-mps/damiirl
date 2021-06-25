@@ -36,12 +36,28 @@ pip install -r requirements.txt   # Install dependencies
 Implimentation of "Deep Adaptive Multi-intention Inverse Reinforcement Learning"
 
 ## Training
+A simple experiment with a default set of parameters can be done by running:
 
-Dependencies:
+```
+python3 main.py
+```
+The following paramters are defined which can be set for various experiments:
 
-Python = 3.6
-Torch = 1.7
-numpy = 1.19
+- <b>miirl_type</b>: the main algorithm which can be either 'SEM' or 'MCEM', where 'SEM' : SEM-MIIRL and 'MCEM' : MCEM-MIIRL
+- <b>game_type</b>: the environment which can be either 'ow' or 'bw', where 'ow' : M-ObjectWorld and 'bw' : M-BinaryWorld
+- <b>sample_length</b>: the length of each demonstration sample
+- <b>alpha</b>: the concentration parameter
+- <b>sample_size</b>: the number of demonstrations for each reward/intention
+- <b>rewards_types</b>: the intention/reward types which are in total six, ['A','B','C','D','E','F']
+- <b>mirl_maxiter</b>: the maximum number of iterations
 
-Usage:
-run python3 main.py for defualt training of SEM-MIIRL on M-BinaryWorld with three rewards types.
+## Training
+We run the first experiments by setting the paramters as:
+- miirl_type = 'SEM'
+- game_type = 'ow'
+- sample_length = 8
+- alpha = 1
+- sample_size = 16
+- rewards_types = ['A','B']
+- mirl_maxiter = 200
+The following picture shows the true and predicted rewards.
