@@ -18,9 +18,9 @@ If you find this code useful in your research then please cite
 @inproceedings{gupta2018social,
   title={Deep Adaptive Multi-Intention Inverse Reinforcement Learning},
   author={Bighashdel, Ariyan and Meletis, Panagiotis and Jancura, Pavol and Dubbelman, Gijs},
-  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  booktitle={Springer in the Lecture Notes in Computer Science Series (LNCS)},
   number={CONF},
-  year={2018}
+  year={2020}
 }
 ```
 
