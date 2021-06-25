@@ -20,7 +20,7 @@ sample_size = 16 # the number of demonstrations for each reward/intention
 rewards_types = ['A','B','C'] # intention/reward types which are in total six, ['A','B','C','D','E','F']
 exp_n = 1
 seed = 1
-mirl_maxiter = 1
+mirl_maxiter = 200
 
 
 checkpoint = {
