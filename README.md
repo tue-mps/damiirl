@@ -51,7 +51,7 @@ The following paramters are defined which can be set for various experiments:
 - <b>rewards_types</b>: the intention/reward types which are in total six, ['A','B','C','D','E','F']
 - <b>mirl_maxiter</b>: the maximum number of iterations
 
-## Training
+## Experiment
 We conduct an experiments by setting the paramters as:
 - miirl_type = 'SEM'
 - game_type = 'ow'
