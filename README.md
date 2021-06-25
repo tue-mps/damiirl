@@ -52,7 +52,7 @@ The following paramters are defined which can be set for various experiments:
 - <b>mirl_maxiter</b>: the maximum number of iterations
 
 ## Training
-We run the first experiments by setting the paramters as:
+We conduct an experiments by setting the paramters as:
 - miirl_type = 'SEM'
 - game_type = 'ow'
 - sample_length = 8
@@ -60,4 +60,9 @@ We run the first experiments by setting the paramters as:
 - sample_size = 16
 - rewards_types = ['A','B']
 - mirl_maxiter = 200
-The following picture shows the true and predicted rewards.
+
+The following picture shows the true and predicted rewards:
+
+<div align='center'>
+  <img src='images/1SEMow.png' width='1000px'>
+</div>
