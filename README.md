@@ -4,7 +4,7 @@ This repository is the implimention the paper:
 
 **Deep Adaptive Multi-Intention Inverse Reinforcement Learning</a>**
 <br>
-<a href="http://web.stanford.edu/~agrim/">Ariyan Bighashdel</a>,
+<a href="https://www.tue.nl/en/research/researchers/ariyan-bighashdel/">Ariyan Bighashdel</a>,
 <a href="https://www.tue.nl/en/research/researchers/panagiotis-meletis/">Panagiotis Meletis</a>,
 <a href="https://www.tue.nl/en/research/researchers/pavol-jancura/">Pavol Jancura</a>,
 <a href="https://www.tue.nl/en/research/researchers/gijs-dubbelman/">Gijs Dubbelman</a>
