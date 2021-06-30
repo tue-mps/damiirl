@@ -41,7 +41,7 @@ A simple experiment with a default set of parameters can be done by running:
 ```
 python3 main.py
 ```
-The following paramters are defined which can be set for various experiments:
+The following paramters are defined which can be set for various experiments in main.py:
 
 - <b>miirl_type</b>: the main algorithm which can be either 'SEM' or 'MCEM', where 'SEM' : SEM-MIIRL and 'MCEM' : MCEM-MIIRL
 - <b>game_type</b>: the environment which can be either 'ow' or 'bw', where 'ow' : M-ObjectWorld and 'bw' : M-BinaryWorld
