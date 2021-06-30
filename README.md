@@ -4,7 +4,7 @@ This repository is the implimention the paper:
 
 **Deep Adaptive Multi-Intention Inverse Reinforcement Learning</a>**
 <br>
-<a href="http://web.stanford.edu/~agrim/">Ariyan Bighashdel</a>,
+<a href="https://www.tue.nl/en/research/researchers/ariyan-bighashdel/">Ariyan Bighashdel</a>,
 <a href="https://www.tue.nl/en/research/researchers/panagiotis-meletis/">Panagiotis Meletis</a>,
 <a href="https://www.tue.nl/en/research/researchers/pavol-jancura/">Pavol Jancura</a>,
 <a href="https://www.tue.nl/en/research/researchers/gijs-dubbelman/">Gijs Dubbelman</a>
@@ -18,9 +18,9 @@ If you find this code useful in your research then please cite
 @inproceedings{gupta2018social,
   title={Deep Adaptive Multi-Intention Inverse Reinforcement Learning},
   author={Bighashdel, Ariyan and Meletis, Panagiotis and Jancura, Pavol and Dubbelman, Gijs},
-  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  booktitle={Springer in the Lecture Notes in Computer Science Series (LNCS)},
   number={CONF},
-  year={2018}
+  year={2020}
 }
 ```
 
@@ -52,7 +52,7 @@ The following paramters are defined which can be set for various experiments:
 - <b>mirl_maxiter</b>: the maximum number of iterations
 
 ## Experiment
-We conduct an experiments by setting the paramters as:
+We conduct an experiment by setting the paramters as:
 - miirl_type = 'SEM'
 - game_type = 'ow'
 - sample_length = 8
