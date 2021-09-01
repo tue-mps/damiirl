@@ -1,6 +1,6 @@
 # DAMIIRL
 
-This repository is the implimention the paper:
+This repository is the implimention of the paper:
 
 **Deep Adaptive Multi-Intention Inverse Reinforcement Learning</a>**
 <br>
